@@ -109,9 +109,14 @@
     display: none;
   }
 
+  .pagination {
+    justify-content: center; /* Sayfa numaralandırmayı ortala */
+  }
+
   .pagination button {
-    flex-basis: 100%; /* Mobilde butonların tam genişlik kaplamasını sağlar */
-    margin-left: 0;
+    padding: 6px 12px;
+    margin: 4px;
+    max-width: 40px; 
   }
 
   .table th:first-child,
