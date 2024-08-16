@@ -77,7 +77,7 @@ const DataTable: React.FC = () => {
               alt={token}
               onError={(e) => {
                 e.currentTarget.onerror = null;
-                e.currentTarget.src = "/public/no-image.svg";
+                e.currentTarget.src = "/no-image.svg";
               }}
             />
             <div className="symbol-container">

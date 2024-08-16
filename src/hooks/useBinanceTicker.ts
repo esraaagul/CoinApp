@@ -1,47 +1,46 @@
 import { useState, useEffect } from "react";
+import { debounce } from "lodash";
 
-interface Prices {
-  [symbol: string]: number;
-}
+const useBinanceTicker = (symbols: string[]) => {
+  const [prices, setPrices] = useState<{ [key: string]: number }>({});
 
-const useBinanceTicker = (symbols: string[]): Prices => {
-  const [prices, setPrices] = useState<Prices>({});
-
-  const createWebSocket = (url: string): WebSocket => {
+  const createWebSocket = (url: string) => {
     const ws = new WebSocket(url);
 
+    // WebSocket bağlantısı kurulduğunda
     ws.onopen = () => {
-      console.log("WebSocket connection established.");
+      console.log("WebSocket bağlantısı başarılı.");
     };
 
-    const handleWebSocketMessage = (event: MessageEvent) => {
+    // Debounce uygulanan mesaj işleyici
+    const handleWebSocketMessage = debounce((event: MessageEvent) => {
       const message = JSON.parse(event.data);
       const data = message.data;
-      const symbol = data.s;
-      const price = parseFloat(data.c);
+      const symbol = data.s; // Sembol adı
+      const price = parseFloat(data.c); // Güncel fiyat
 
       setPrices((prev) => ({
         ...prev,
         [symbol]: price,
       }));
-    };
+    }, 30000);
 
     ws.onmessage = handleWebSocketMessage;
 
-    ws.onerror = (error: Event) => {
-      console.error("WebSocket error:", error);
+    ws.onerror = (error) => {
+      console.error("WebSocket hatası:", error);
       ws.close();
     };
 
     ws.onclose = () => {
-      console.warn("WebSocket connection closed. Reconnecting...");
+      console.warn("WebSocket bağlantısı kapandı. Yeniden bağlanıyor...");
       reconnect(url);
     };
 
     return ws;
   };
 
-  const reconnect = (url: string, delay = 5000) => {
+  const reconnect = (url: string, delay: number = 5000) => {
     setTimeout(() => {
       createWebSocket(url);
     }, delay);
@@ -60,7 +59,7 @@ const useBinanceTicker = (symbols: string[]): Prices => {
 
     return () => {
       if (ws) {
-        ws.close();
+        ws.close(); // WebSocket bağlantısını kapatma işlemi
       }
     };
   }, [symbols]);
