@@ -109,6 +109,11 @@
     display: none;
   }
 
+  .pagination button {
+    flex-basis: 100%; /* Mobilde butonların tam genişlik kaplamasını sağlar */
+    margin-left: 0;
+  }
+
   .table th:first-child,
   .table td:first-child {
     width: 60%;
