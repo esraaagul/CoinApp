@@ -1,7 +1,5 @@
 import "@testing-library/jest-dom";
-import React from "react";
 import { render, screen, waitFor } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import DataTable from "./DataTable";
 
@@ -36,6 +34,10 @@ jest.mock("../hooks/useBinanceTicker", () => ({
 const queryClient = new QueryClient();
 
 describe("DataTable", () => {
+  afterEach(() => {
+    jest.restoreAllMocks(); // Restore all mocks after each test
+  });
+
   it("renders loading state initially", () => {
     render(
       <QueryClientProvider client={queryClient}>
@@ -61,9 +63,11 @@ describe("DataTable", () => {
 
   it("renders error message on API error", async () => {
     // Mock API error
-    jest.spyOn(console, "error").mockImplementation(() => {}); // Suppress console.error in test output
-    const apiClient = require("../api/apiClient");
-    apiClient.get.mockRejectedValueOnce(new Error("API error"));
+    jest.resetModules(); // Reset modules before mocking new implementation
+
+    jest.mock("../api/apiClient", () => ({
+      get: jest.fn().mockRejectedValueOnce(new Error("API error")),
+    }));
 
     render(
       <QueryClientProvider client={queryClient}>

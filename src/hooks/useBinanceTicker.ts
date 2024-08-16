@@ -1,50 +1,34 @@
 import { useState, useEffect } from "react";
-import { debounce } from "lodash";
 
-/**
- * A custom React hook that establishes a WebSocket connection to Binance's ticker stream
- * and returns the latest prices for a list of specified cryptocurrency symbols.
- *
- * @param {string[]} symbols - An array of cryptocurrency symbols to track (e.g., ['BTCUSDT', 'ETHUSDT']).
- * @returns {Object<string, number>} An object where the keys are the symbols and the values are the latest prices.
- */
-const useBinanceTicker = (symbols) => {
-  const [prices, setPrices] = useState({});
+interface Prices {
+  [symbol: string]: number;
+}
 
-  /**
-   * Creates a WebSocket connection to the specified URL and handles incoming messages
-   * to update the cryptocurrency prices.
-   *
-   * @param {string} url - The WebSocket URL to connect to.
-   * @returns {WebSocket} The created WebSocket instance.
-   */
-  const createWebSocket = (url) => {
+const useBinanceTicker = (symbols: string[]): Prices => {
+  const [prices, setPrices] = useState<Prices>({});
+
+  const createWebSocket = (url: string): WebSocket => {
     const ws = new WebSocket(url);
 
     ws.onopen = () => {
       console.log("WebSocket connection established.");
     };
 
-    /**
-     * Handles incoming WebSocket messages with debounce to prevent excessive updates.
-     *
-     * @param {MessageEvent} event - The WebSocket message event.
-     */
-    const handleWebSocketMessage = debounce((event) => {
+    const handleWebSocketMessage = (event: MessageEvent) => {
       const message = JSON.parse(event.data);
       const data = message.data;
-      const symbol = data.s; // Symbol name
-      const price = parseFloat(data.c); // Current price
+      const symbol = data.s;
+      const price = parseFloat(data.c);
 
       setPrices((prev) => ({
         ...prev,
         [symbol]: price,
       }));
-    }, 60000); // Debounce interval: 60 seconds
+    };
 
     ws.onmessage = handleWebSocketMessage;
 
-    ws.onerror = (error) => {
+    ws.onerror = (error: Event) => {
       console.error("WebSocket error:", error);
       ws.close();
     };
@@ -57,13 +41,7 @@ const useBinanceTicker = (symbols) => {
     return ws;
   };
 
-  /**
-   * Reconnects to the WebSocket server after a specified delay.
-   *
-   * @param {string} url - The WebSocket URL to reconnect to.
-   * @param {number} [delay=5000] - The delay in milliseconds before attempting to reconnect.
-   */
-  const reconnect = (url, delay = 5000) => {
+  const reconnect = (url: string, delay = 5000) => {
     setTimeout(() => {
       createWebSocket(url);
     }, delay);

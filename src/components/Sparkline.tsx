@@ -11,7 +11,6 @@ import {
   Legend,
 } from "chart.js";
 
-// Register the necessary Chart.js components for rendering the line chart
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -22,37 +21,25 @@ ChartJS.register(
   Legend
 );
 
-/**
- * The props for the Sparkline component.
- *
- * @typedef {Object} SparklineProps
- * @property {number[]} data - An array of numbers representing the data points to be plotted on the sparkline.
- * @property {number} change - A numerical value representing the percentage change; used to determine the color of the line.
- */
+interface SparklineProps {
+  data: number[];
+  change: number;
+}
 
-/**
- * Sparkline is a React component that renders a simple line chart (sparkline) using Chart.js.
- *
- * @param {SparklineProps} props - The props for the Sparkline component.
- * @returns {JSX.Element | null} A JSX element rendering the Line chart, or null if no data is provided.
- */
-const Sparkline = ({ data, change }) => {
-  // Return null if no data is provided
+const Sparkline: React.FC<SparklineProps> = ({ data, change }) => {
   if (!data || data.length === 0) {
     return null;
   }
 
-  // Determine the line color based on the change value
   const borderColor = change > 0 ? "green" : change < 0 ? "red" : "gray";
 
-  // Prepare the chart data for rendering
   const chartData = {
-    labels: data.map((_, index) => index), // Generate labels based on the data index
+    labels: data.map((_, index) => index.toString()), // Convert index to string
     datasets: [
       {
         data: data,
-        borderColor: borderColor, // Set the line color
-        borderWidth: 2, // Set the width of the line
+        borderColor: borderColor,
+        borderWidth: 2,
       },
     ],
   };
@@ -62,19 +49,19 @@ const Sparkline = ({ data, change }) => {
       data={chartData}
       options={{
         responsive: true,
-        maintainAspectRatio: false, // Disable aspect ratio for flexibility
+        maintainAspectRatio: false,
         scales: {
-          x: { display: false }, // Hide the x-axis
-          y: { display: false }, // Hide the y-axis
+          x: { display: false },
+          y: { display: false },
         },
-        elements: { point: { radius: 0 } }, // Remove points from the line
+        elements: { point: { radius: 0 } },
         plugins: {
-          legend: { display: false }, // Hide the chart legend
-          tooltip: { enabled: false }, // Disable tooltips
+          legend: { display: false },
+          tooltip: { enabled: false },
         },
       }}
-      height={50} // Set a fixed height for the chart
-      width={150} // Set a fixed width for the chart
+      height={50}
+      width={150}
     />
   );
 };
