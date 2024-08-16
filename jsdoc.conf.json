@@ -1,0 +1,33 @@
+{
+    "plugins": [
+        "plugins/markdown"
+    ],
+    "source": {
+        "include": [
+            "src"
+        ],
+        "includePattern": ".+\\.(js|ts)x?$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "opts": {
+        "destination": "./docs",
+        "recurse": true,
+        "template": "node_modules/jsdoc-template"
+    },
+    "babel": {
+        "extensions": [
+            "ts",
+            "tsx",
+            "js",
+            "jsx"
+        ],
+        "plugins": [
+            "@babel/plugin-transform-typescript",
+            "@babel/plugin-syntax-flow"
+        ],
+        "presets": [
+            "@babel/preset-env",
+            "@babel/preset-typescript"
+        ]
+    }
+}

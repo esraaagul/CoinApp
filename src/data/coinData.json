@@ -1,0 +1,487 @@
+{
+    "BTCUSDT": {
+        "token": "BTC",
+        "currency": "USDT",
+        "name": "Bitcoin"
+    },
+    "ETHUSDT": {
+        "token": "ETH",
+        "currency": "USDT",
+        "name": "Ethereum"
+    },
+    "BNBUSDT": {
+        "token": "BNB",
+        "currency": "USDT",
+        "name": "Binance Coin"
+    },
+    "XRPUSDT": {
+        "token": "XRP",
+        "currency": "USDT",
+        "name": "Ripple"
+    },
+    "LTCUSDT": {
+        "token": "LTC",
+        "currency": "USDT",
+        "name": "Litecoin"
+    },
+    "ADAUSDT": {
+        "token": "ADA",
+        "currency": "USDT",
+        "name": "Cardano"
+    },
+    "DOTUSDT": {
+        "token": "DOT",
+        "currency": "USDT",
+        "name": "Polkadot"
+    },
+    "BCHUSDT": {
+        "token": "BCH",
+        "currency": "USDT",
+        "name": "Bitcoin Cash"
+    },
+    "LINKUSDT": {
+        "token": "LINK",
+        "currency": "USDT",
+        "name": "Chainlink"
+    },
+    "XLMUSDT": {
+        "token": "XLM",
+        "currency": "USDT",
+        "name": "Stellar"
+    },
+    "DOGEUSDT": {
+        "token": "DOGE",
+        "currency": "USDT",
+        "name": "Dogecoin"
+    },
+    "TRXUSDT": {
+        "token": "TRX",
+        "currency": "USDT",
+        "name": "TRON"
+    },
+    "EOSUSDT": {
+        "token": "EOS",
+        "currency": "USDT",
+        "name": "EOS"
+    },
+    "ETCUSDT": {
+        "token": "ETC",
+        "currency": "USDT",
+        "name": "Ethereum Classic"
+    },
+    "VETUSDT": {
+        "token": "VET",
+        "currency": "USDT",
+        "name": "VeChain"
+    },
+    "FILUSDT": {
+        "token": "FIL",
+        "currency": "USDT",
+        "name": "Filecoin"
+    },
+    "XTZUSDT": {
+        "token": "XTZ",
+        "currency": "USDT",
+        "name": "Tezos"
+    },
+    "ATOMUSDT": {
+        "token": "ATOM",
+        "currency": "USDT",
+        "name": "Cosmos"
+    },
+    "NEOUSDT": {
+        "token": "NEO",
+        "currency": "USDT",
+        "name": "NEO"
+    },
+    "IOTAUSDT": {
+        "token": "IOTA",
+        "currency": "USDT",
+        "name": "IOTA"
+    },
+    "MKRUSDT": {
+        "token": "MKR",
+        "currency": "USDT",
+        "name": "Maker"
+    },
+    "ZRXUSDT": {
+        "token": "ZRX",
+        "currency": "USDT",
+        "name": "0x"
+    },
+    "QTUMUSDT": {
+        "token": "QTUM",
+        "currency": "USDT",
+        "name": "Qtum"
+    },
+    "ONTUSDT": {
+        "token": "ONT",
+        "currency": "USDT",
+        "name": "Ontology"
+    },
+    "DASHUSDT": {
+        "token": "DASH",
+        "currency": "USDT",
+        "name": "Dash"
+    },
+    "ZECUSDT": {
+        "token": "ZEC",
+        "currency": "USDT",
+        "name": "Zcash"
+    },
+    "SNXUSDT": {
+        "token": "SNX",
+        "currency": "USDT",
+        "name": "Synthetix"
+    },
+    "KNCUSDT": {
+        "token": "KNC",
+        "currency": "USDT",
+        "name": "Kyber Network"
+    },
+    "COMPUSDT": {
+        "token": "COMP",
+        "currency": "USDT",
+        "name": "Compound"
+    },
+    "OMGUSDT": {
+        "token": "OMG",
+        "currency": "USDT",
+        "name": "OMG Network"
+    },
+    "YFIUSDT": {
+        "token": "YFI",
+        "currency": "USDT",
+        "name": "Yearn Finance"
+    },
+    "BALUSDT": {
+        "token": "BAL",
+        "currency": "USDT",
+        "name": "Balancer"
+    },
+    "CRVUSDT": {
+        "token": "CRV",
+        "currency": "USDT",
+        "name": "Curve"
+    },
+    "SUSHIUSDT": {
+        "token": "SUSHI",
+        "currency": "USDT",
+        "name": "SushiSwap"
+    },
+    "UNIUSDT": {
+        "token": "UNI",
+        "currency": "USDT",
+        "name": "Uniswap"
+    },
+    "ALGOUSDT": {
+        "token": "ALGO",
+        "currency": "USDT",
+        "name": "Algorand"
+    },
+    "GRTUSDT": {
+        "token": "GRT",
+        "currency": "USDT",
+        "name": "The Graph"
+    },
+    "AAVEUSDT": {
+        "token": "AAVE",
+        "currency": "USDT",
+        "name": "Aave"
+    },
+    "MANAUSDT": {
+        "token": "MANA",
+        "currency": "USDT",
+        "name": "Decentraland"
+    },
+    "ENJUSDT": {
+        "token": "ENJ",
+        "currency": "USDT",
+        "name": "Enjin"
+    },
+    "ANKRUSDT": {
+        "token": "ANKR",
+        "currency": "USDT",
+        "name": "Ankr"
+    },
+    "OCEANUSDT": {
+        "token": "OCEAN",
+        "currency": "USDT",
+        "name": "Ocean Protocol"
+    },
+    "KAVAUSDT": {
+        "token": "KAVA",
+        "currency": "USDT",
+        "name": "Kava"
+    },
+    "RUNEUSDT": {
+        "token": "RUNE",
+        "currency": "USDT",
+        "name": "THORChain"
+    },
+    "LRCUSDT": {
+        "token": "LRC",
+        "currency": "USDT",
+        "name": "Loopring"
+    },
+    "STORJUSDT": {
+        "token": "STORJ",
+        "currency": "USDT",
+        "name": "Storj"
+    },
+    "HNTUSDT": {
+        "token": "HNT",
+        "currency": "USDT",
+        "name": "Helium"
+    },
+    "HBARUSDT": {
+        "token": "HBAR",
+        "currency": "USDT",
+        "name": "Hedera Hashgraph"
+    },
+    "SXPUSDT": {
+        "token": "SXP",
+        "currency": "USDT",
+        "name": "Swipe"
+    },
+    "CELOUSDT": {
+        "token": "CELO",
+        "currency": "USDT",
+        "name": "Celo"
+    },
+    "FTMUSDT": {
+        "token": "FTM",
+        "currency": "USDT",
+        "name": "Fantom"
+    },
+    "CHRUSDT": {
+        "token": "CHR",
+        "currency": "USDT",
+        "name": "Chromia"
+    },
+    "TOMOUSDT": {
+        "token": "TOMO",
+        "currency": "USDT",
+        "name": "TomoChain"
+    },
+    "BELUSDT": {
+        "token": "BEL",
+        "currency": "USDT",
+        "name": "Bella Protocol"
+    },
+    "CTSIUSDT": {
+        "token": "CTSI",
+        "currency": "USDT",
+        "name": "Cartesi"
+    },
+    "DGBUSDT": {
+        "token": "DGB",
+        "currency": "USDT",
+        "name": "DigiByte"
+    },
+    "RSRUSDT": {
+        "token": "RSR",
+        "currency": "USDT",
+        "name": "Reserve Rights"
+    },
+    "1INCHUSDT": {
+        "token": "1INCH",
+        "currency": "USDT",
+        "name": "1inch"
+    },
+    "XEMUSDT": {
+        "token": "XEM",
+        "currency": "USDT",
+        "name": "NEM"
+    },
+    "ZILUSDT": {
+        "token": "ZIL",
+        "currency": "USDT",
+        "name": "Zilliqa"
+    },
+    "ICXUSDT": {
+        "token": "ICX",
+        "currency": "USDT",
+        "name": "ICON"
+    },
+    "KSMUSDT": {
+        "token": "KSM",
+        "currency": "USDT",
+        "name": "Kusama"
+    },
+    "SANDUSDT": {
+        "token": "SAND",
+        "currency": "USDT",
+        "name": "The Sandbox"
+    },
+    "AXSUSDT": {
+        "token": "AXS",
+        "currency": "USDT",
+        "name": "Axie Infinity"
+    },
+    "LUNAUSDT": {
+        "token": "LUNA",
+        "currency": "USDT",
+        "name": "Terra"
+    },
+    "AVAXUSDT": {
+        "token": "AVAX",
+        "currency": "USDT",
+        "name": "Avalanche"
+    },
+    "NEARUSDT": {
+        "token": "NEAR",
+        "currency": "USDT",
+        "name": "NEAR Protocol"
+    },
+    "CHZUSDT": {
+        "token": "CHZ",
+        "currency": "USDT",
+        "name": "Chiliz"
+    },
+    "RVNUSDT": {
+        "token": "RVN",
+        "currency": "USDT",
+        "name": "Ravencoin"
+    },
+    "COTIUSDT": {
+        "token": "COTI",
+        "currency": "USDT",
+        "name": "COTI"
+    },
+    "FTTUSDT": {
+        "token": "FTT",
+        "currency": "USDT",
+        "name": "FTX Token"
+    },
+    "ALPHAUSDT": {
+        "token": "ALPHA",
+        "currency": "USDT",
+        "name": "Alpha Finance"
+    },
+    "REEFUSDT": {
+        "token": "REEF",
+        "currency": "USDT",
+        "name": "Reef"
+    },
+    "LINAUSDT": {
+        "token": "LINA",
+        "currency": "USDT",
+        "name": "Linear"
+    },
+    "RAYUSDT": {
+        "token": "RAY",
+        "currency": "USDT",
+        "name": "Raydium"
+    },
+    "BAKEUSDT": {
+        "token": "BAKE",
+        "currency": "USDT",
+        "name": "BakeryToken"
+    },
+    "SLPUSDT": {
+        "token": "SLP",
+        "currency": "USDT",
+        "name": "Smooth Love Potion"
+    },
+    "LITUSDT": {
+        "token": "LIT",
+        "currency": "USDT",
+        "name": "Litentry"
+    },
+    "SFPUSDT": {
+        "token": "SFP",
+        "currency": "USDT",
+        "name": "SafePal"
+    },
+    "C98USDT": {
+        "token": "C98",
+        "currency": "USDT",
+        "name": "Coin98"
+    },
+    "MINAUSDT": {
+        "token": "MINA",
+        "currency": "USDT",
+        "name": "Mina"
+    },
+    "RLCUSDT": {
+        "token": "RLC",
+        "currency": "USDT",
+        "name": "iExec RLC"
+    },
+    "ZENUSDT": {
+        "token": "ZEN",
+        "currency": "USDT",
+        "name": "Horizen"
+    },
+    "SYSUSDT": {
+        "token": "SYS",
+        "currency": "USDT",
+        "name": "Syscoin"
+    },
+    "GMTUSDT": {
+        "token": "GMT",
+        "currency": "USDT",
+        "name": "STEPN"
+    },
+    "MBOXUSDT": {
+        "token": "MBOX",
+        "currency": "USDT",
+        "name": "MOBOX"
+    },
+    "DARUSDT": {
+        "token": "DAR",
+        "currency": "USDT",
+        "name": "Mines of Dalarnia"
+    },
+    "GALUSDT": {
+        "token": "GAL",
+        "currency": "USDT",
+        "name": "Galxe"
+    },
+    "APEXUSDT": {
+        "token": "APEX",
+        "currency": "USDT",
+        "name": "ApeX Protocol"
+    },
+    "RLCUSDT": {
+        "token": "RLC",
+        "currency": "USDT",
+        "name": "iExec RLC"
+    },
+    "TWTUSDT": {
+        "token": "TWT",
+        "currency": "USDT",
+        "name": "Trust Wallet Token"
+    },
+    "GALAUSDT": {
+        "token": "GALA",
+        "currency": "USDT",
+        "name": "Gala"
+    },
+    "PEPEUSDT": {
+        "token": "PEPE",
+        "currency": "USDT",
+        "name": "Pepe"
+    },
+    "SHIBUSDT": {
+        "token": "SHIB",
+        "currency": "USDT",
+        "name": "Shiba Inu"
+    },
+    "RNDRUSDT": {
+        "token": "RNDR",
+        "currency": "USDT",
+        "name": "Render Token"
+    },
+    "FLOKIUSDT": {
+        "token": "FLOKI",
+        "currency": "USDT",
+        "name": "Floki Inu"
+    },
+    "SOLUSDT": {
+        "token": "SOL",
+        "currency": "USDT",
+        "name": "Solana"
+    }
+}

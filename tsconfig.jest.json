@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx", // React JSX desteği
+    "module": "commonjs", // Jest commonjs modül sistemi ile çalışır
+    "target": "es5", // ES5 çıktısı
+    "esModuleInterop": true, // ES module interop
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "types": ["jest", "node"], // Jest ve Node.js türleri
+    "sourceMap": true
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules"]
+}
